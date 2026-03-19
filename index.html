@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的第一个网页</title>
 
+    <!-- PWA 相关配置 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4299e1">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
     <!-- 这里是 CSS，负责网页的样式和美化 -->
     <style>
         /* 整个页面的基础样式 */
@@ -137,6 +142,11 @@
         // 这里是 JavaScript，负责网页的交互
         function sayHello() {
             alert("你好呀！感谢你来看我的网页！");
+        }
+
+        // 注册 Service Worker，让网页支持 PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
         }
     </script>
 
