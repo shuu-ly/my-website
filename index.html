@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个网页</title>
+
+    <!-- 这里是 CSS，负责网页的样式和美化 -->
+    <style>
+        /* 整个页面的基础样式 */
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        /* 最外层容器，让内容居中 */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 大标题 */
+        h1 {
+            color: #2c5282;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        /* 副标题 */
+        .subtitle {
+            color: #718096;
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        /* 小标题 */
+        h2 {
+            color: #2d3748;
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        /* 普通段落文字 */
+        p {
+            line-height: 1.8;
+            font-size: 15px;
+            color: #4a5568;
+        }
+
+        /* 爱好列表 */
+        .hobbies {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        /* 每个爱好标签 */
+        .hobby-tag {
+            background-color: #ebf4ff;
+            color: #2c5282;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* 按钮样式 */
+        .btn {
+            display: inline-block;
+            margin-top: 32px;
+            padding: 12px 28px;
+            background-color: #4299e1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        /* 鼠标悬停时按钮变色 */
+        .btn:hover {
+            background-color: #2b6cb0;
+        }
+
+        /* 底部文字 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #a0aec0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HTML 部分：网页的结构和内容 -->
+
+        <h1>你好，我是鼠鼠！</h1>
+        <p class="subtitle">欢迎来到我的第一个网页</p>
+
+        <h2>关于我</h2>
+        <p>
+            我是一个正在学习前端开发的新手。
+            今天刚搭建好开发环境，这是我写的第一个网页！
+            虽然很简单，但这是一个好的开始。
+        </p>
+
+        <h2>我的爱好</h2>
+        <div class="hobbies">
+            <span class="hobby-tag">编程</span>
+            <span class="hobby-tag">音乐</span>
+            <span class="hobby-tag">游戏</span>
+            <span class="hobby-tag">阅读</span>
+        </div>
+
+        <h2>今天学到了什么</h2>
+        <p>
+            今天我学会了安装 VS Code、Node.js、Git，
+            还成功配置了 Claude Code。
+            现在我正在学习用 HTML + CSS 写网页！
+        </p>
+
+        <!-- JavaScript 部分：让网页能互动 -->
+        <button class="btn" onclick="sayHello()">点击和我打个招呼</button>
+    </div>
+
+    <script>
+        // 这里是 JavaScript，负责网页的交互
+        function sayHello() {
+            alert("你好呀！感谢你来看我的网页！");
+        }
+    </script>
+
+</body>
+</html>
